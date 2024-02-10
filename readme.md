@@ -160,6 +160,7 @@
 10. Install SSL on vps with Let's Encrypt (Requires domain):
 
     - `sudo apt install certbot`
+    - `sudo apt install certbot python3-certbot-nginx`
     - run the following and follow the process:
         - `sudo certbot --nginx -d your_domain.com`
     - check nginx configuration:
