@@ -5,7 +5,7 @@
         - `pip freeze > requirements.txt`
     - Set up static files:
         - Install whitenoise:
-            - `pip install whiteneoise`
+            - `pip install whitenoise`
             - `pip freeze > requirements.txt`
         - Paste the following at the top of middleware list:
             - `"whitenoise.middleware.WhiteNoiseMiddleware",`
