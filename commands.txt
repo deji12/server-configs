@@ -1,0 +1,8 @@
+activate:
+    source /opt/myproject/bin/activate
+
+
+sudo apt-get update
+sudo apt-get install ufw
+
+sudo ufw allow 8000

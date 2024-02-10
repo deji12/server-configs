@@ -1,0 +1,23 @@
+server {
+    listen 80;
+    server_name gulfbankinc.com www.gulfbankinc.com;
+
+   access_log /var/log/nginx/gulfbankinc_access.log;
+
+    location /static/ {
+        alias /opt/myproject/myproject/bank-sc/static/;
+    }
+
+    location / {
+        proxy_pass http://155.94.160.110:8000;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        add_header P3P 'CP="ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV"';
+    }
+}
+
+sudo nano /etc/nginx/sites-available/myproject
+
+sudo service nginx restart
+
+ssh-keygen -R <host>

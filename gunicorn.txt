@@ -1,0 +1,17 @@
+
+run:
+    ginicorn:
+        gunicorn --bind 0.0.0.0:8000 project_name.wsgi
+    python:
+        python manage.py runserver 0.0.0.0:8000
+
+run in background:
+    gunicorn --bind 0.0.0.0:8000 project_name.wsgi:application > gunicorn.log 2>&1 &
+
+kill gunicorn process running presently in terminal:
+    pkill gunicorn
+
+kill process running in background:
+
+    [returns an id] => pgrep -f "gunicorn --bind 0.0.0.0:8000 project_name.wsgi:application"
+    kill <id>

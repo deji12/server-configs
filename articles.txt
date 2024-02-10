@@ -1,0 +1,5 @@
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-local-django-app-to-a-vps
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-22-04
+
+https://stackoverflow.com/questions/37339383/nginx-gunicorn-django-not-working
