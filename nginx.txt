@@ -1,15 +1,15 @@
 server {
     listen 80;
-    server_name gulfbankinc.com www.gulfbankinc.com;
+    server_name yourdomain.com www.yourdomain.com;
 
-   access_log /var/log/nginx/gulfbankinc_access.log;
+   access_log /var/log/nginx/your_custom_file_name.log;
 
     location /static/ {
-        alias /opt/myproject/myproject/bank-sc/static/;
+        alias /opt/myproject/myproject/path-to-staticfiles-directory/;
     }
 
     location / {
-        proxy_pass http://155.94.160.110:8000;
+        proxy_pass http://serverIp:8000;
         proxy_set_header X-Forwarded-Host $server_name;
         proxy_set_header X-Real-IP $remote_addr;
         add_header P3P 'CP="ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV"';
